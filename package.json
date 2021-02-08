@@ -1,0 +1,19 @@
+{
+  "name": "modingclone",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wawo-dev-team/modingclone-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wawo-dev-team/modingclone-backend/issues"
+  },
+  "homepage": "https://github.com/wawo-dev-team/modingclone-backend#readme"
+}
