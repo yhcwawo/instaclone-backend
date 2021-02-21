@@ -34,7 +34,7 @@ export default {
         } else {
             return {
                 ok : false,
-                error : "Could not update Profile.",
+                error : "Could not update Profile!",
             }
         }
 
