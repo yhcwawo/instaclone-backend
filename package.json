@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "nodemon --exec babel-node server",
+    "preinstall": "npx npm-force-resolutions",
+    "dev": "nodemon --exec ts-node src/server --ext ts,js --delay 2s",
     "migrate": "npx prisma migrate dev --preview-feature",
     "studio": "npx prisma studio"
   },
@@ -34,6 +35,12 @@
     "@babel/preset-env": "^7.12.13",
     "@prisma/cli": "^2.16.1",
     "nodemon": "^2.0.7",
-    "prisma": "^2.16.1"
+    "prisma": "^2.16.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  },
+  "resolutions": {
+    "fs-capacitor": "^6.2.0",
+    "graphql-upload": "^11.0.0"
   }
 }
