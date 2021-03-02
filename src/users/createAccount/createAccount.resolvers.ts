@@ -43,8 +43,15 @@ const resolvers: Resolvers = {
             },
         });
 
+        return {
+            ok: true,
+        };
+
             } catch (error) {
-                return error;
+                return {
+                    ok: false,
+                    error:error,
+                };
             }
 
         },
