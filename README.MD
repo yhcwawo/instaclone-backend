@@ -21,13 +21,22 @@ Typescript + prisma + express + graphql + apollo server
 
 ## Photos
 
+- [v] Upload Photo (Parse #)
 - [v] See Photo
-- [] Upload Photo
-- [] Edit Photo
-- [] Like/ Unlike Photo Photo
-- [] See Photo Likes (Option)
-- [] See Feed
-- [] Search Photos
+- [v] See Hashtags
+- [v] Search Photos
+- [v] Edit Photo
+- [v] Like / Unlike Photo
+- [v] See Photo Likes
+- [v] See Feed
+- [] See Photo Comments
+
+
+## Comments
+
+- [] Comment on Photo
+- [] Edit Comment
+- [] Delete Comment
 
 
 ## Direct Message

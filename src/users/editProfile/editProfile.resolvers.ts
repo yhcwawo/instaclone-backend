@@ -20,8 +20,8 @@ const resolvers: Resolvers = {
         
         ) => {
             
+            //file upload part Start
             let avatarUrl = null;
-            //file upload parts
             if(avatar){
                 const {filename, createReadStream} = await avatar;
                 const newFilename = `${loggedInUser.id}-${Date.now()}-${filename}`
@@ -30,6 +30,7 @@ const resolvers: Resolvers = {
                 readStream.pipe(writeStream);
                 avatarUrl = `http://localhost:4000/static/${newFilename}`
             }
+            //file upload part End
 
             let uglyPassword = null;
             if(newPassword){
