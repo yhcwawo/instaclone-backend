@@ -29,14 +29,21 @@ Typescript + prisma + express + graphql + apollo server
 - [v] Like / Unlike Photo
 - [v] See Photo Likes
 - [v] See Feed
-- [] See Photo Comments
+- [v] See Photo Comments
+- [v] Is Mine (Delete Photo)
 
 
 ## Comments
 
-- [] Comment on Photo
-- [] Edit Comment
-- [] Delete Comment
+- [v] Comment on Photo
+- [v] Delete Comment (Is Mine)
+- [v] Edit Comment
 
 
-## Direct Message
+## Refactor
+
+- [v] Mutation Responses
+
+## Image Server
+
+- [v] AWS S3 Image Upload

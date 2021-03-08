@@ -20,7 +20,8 @@ model User{
   bio       String?
   avatar    String?
   photos    Photo[]
-  likes      Like[]
+  likes     Like[]
+  comments  Comment[]
   followers User[]    @relation("FollowRelation", references: [id])
   following User[]    @relation("FollowRelation", references: [id])
   createdAt DateTime  @default(now())
@@ -36,9 +37,10 @@ model Photo{
   file      String
   caption   String?
   hashtags  Hashtag[]
+  comments  Comment[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
-  likes      Like[]
+  likes     Like[]
 }
 
 model Hashtag {
@@ -59,4 +61,16 @@ model Like {
   updatedAt DateTime  @updatedAt 
   
   @@unique([photoId, userId])
+}
+
+model Comment {
+  id        Int       @id @default(autoincrement())
+  photo     Photo     @relation(fields: [photoId], references: [id])
+  user      User      @relation(fields: [userId], references: [id])
+  photoId   Int       
+  userId    Int   
+  payload   String    
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt 
+  
 }

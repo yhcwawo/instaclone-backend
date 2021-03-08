@@ -3,10 +3,9 @@ import { gql } from "apollo-server"
 export default gql`
 
     type Mutation {
-        editPhoto(
+        deleteComment(
             id:       Int!
-            caption:  String!
-        ): MutationResponse!
+        ): MutationResponse
     }
 
 `;
