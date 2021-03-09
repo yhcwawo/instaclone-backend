@@ -47,3 +47,12 @@ Typescript + prisma + express + graphql + apollo server
 ## Image Server
 
 - [v] AWS S3 Image Upload
+
+## DMs
+
+- [v] See Rooms
+- [v] Send Message (Create Room)
+- [v] See Room
+- [v] Computed Fields
+- [v] See Message
+- [] Realtime Messages
