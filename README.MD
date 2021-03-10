@@ -55,4 +55,4 @@ Typescript + prisma + express + graphql + apollo server
 - [v] See Room
 - [v] Computed Fields
 - [v] See Message
-- [] Realtime Messages
+- [v] Realtime Messages

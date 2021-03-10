@@ -6,21 +6,41 @@ import { ApolloServer } from 'apollo-server-express';
 import client from './client';
 import {typeDefs, resolvers} from './schema';
 import { getUser, protectResolver } from './users/users.utils';
-import pubsub from "./pubsub";
 
 const PORT = process.env.PORT;
 const apollo = new ApolloServer({
   typeDefs,
   resolvers,
-  context: async({req}) => {
-    if(req){
+  context: async(ctx) => {
+    if(ctx.req){
       return {
-        loggedInUser: await getUser(req.headers.token),
+        loggedInUser: await getUser(ctx.req.headers.token),
         client,
         protectResolver,
       };
-    }
+    } else {
+      const {
+        connection: {context},
+      } = ctx;
 
+      return {
+        loggedInUser:  context.loggedInUser
+      };
+    }
+  },
+  subscriptions: {
+    onConnect: async(params) => {
+      const token = params['token'];
+
+      if(!token){
+        throw new Error("You can't listen.");
+      }
+      const loggedInUser = await getUser(token);
+      return {
+        loggedInUser,
+      };
+
+    },
   },
 });
 
