@@ -34,7 +34,7 @@ const resolvers: Resolvers = {
             const uglyPassword = await bcrypt.hash(password, 10);
 
             // save and return the user
-            return client.user.create({data: {
+            await client.user.create({data: {
                 username,
                 email,
                 firstName, 
