@@ -16,7 +16,7 @@ const resolvers: Resolvers = {
             if(!photo){
                 return {
                     ok: false,
-                    error: "Photo not founc.",
+                    error: "Photo not found.",
                 };
             } else if(photo.userId !== loggedInUser.id){
                 return {

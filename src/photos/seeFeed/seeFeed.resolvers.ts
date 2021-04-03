@@ -3,9 +3,11 @@ import { protectResolver } from "../../users/users.utils";
 
 const resolvers: Resolvers = {
     Query: {
-        seeFeed: protectResolver(async(_,__, { loggedInUser, client } ) => {
+        seeFeed: protectResolver(async(_, {offset} , { loggedInUser, client } ) => {
 
             const feedResult =  client.photo.findMany({
+                take: 2,
+                skip: offset,
                 where: {
                     OR: [
                             {

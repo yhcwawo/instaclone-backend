@@ -44,7 +44,22 @@ export default {
             }
             return userId === loggedInUser.id;
         },
-        
+
+        isLike: async({id}, _ , {loggedInUser}) => {
+            if(!loggedInUser){
+                return false;
+            }
+
+            const exists = await client.like.count({
+                where: {
+                    photoId: id,
+                    userId: loggedInUser.id,
+                },
+            });
+
+            return Boolean(exists);
+        },
+
         
     },
     //Photo Code End
