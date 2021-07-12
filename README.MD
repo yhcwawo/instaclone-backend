@@ -1,7 +1,10 @@
-# Moding Application Back-end
+![Soft](https://capsule-render.vercel.app/api?type=Soft&height=150&text=Instagram%_Back-end&color=gradient&fontSize=70&animation=twinkling)
+# Instagram Back-end Cloning Project
 
-Moding Back-end Source Code.
+Back-end Source Code.
 
+
+## Stack
 Typescript + prisma + express + graphql + apollo server
 
 ## User:
